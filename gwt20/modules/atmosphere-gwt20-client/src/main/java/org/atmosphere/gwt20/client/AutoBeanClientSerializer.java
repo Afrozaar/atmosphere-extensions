@@ -15,13 +15,13 @@
 */
 /*
  * Copyright 2009 Richard Zschech.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -31,12 +31,12 @@
 
 package org.atmosphere.gwt20.client;
 
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.rpc.SerializationException;
 import com.google.web.bindery.autobean.shared.AutoBean;
 import com.google.web.bindery.autobean.shared.AutoBeanCodex;
 import com.google.web.bindery.autobean.shared.AutoBeanFactory;
 import com.google.web.bindery.autobean.shared.AutoBeanUtils;
+
+import com.google.gwt.user.client.rpc.SerializationException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,10 +80,6 @@ public class AutoBeanClientSerializer implements ClientSerializer {
     private Class<Object> activeBeanClass;
     // buffer in order to capture split messages
     private StringBuffer buffer = new StringBuffer(16100);
-
-    public void registerBeanFactory(Class<AutoBeanFactory> factoryClass, Class forBean) {
-        registerBeanFactory((AutoBeanFactory) GWT.create(factoryClass), forBean);
-    }
 
     public void registerBeanFactory(AutoBeanFactory factory, Class forBean) {
         if (beanFactories == null) {
