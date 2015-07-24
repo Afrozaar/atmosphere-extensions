@@ -17,11 +17,25 @@
         <connection>scm:git:git@github.com:Atmosphere/atmosphere-extensions.git</connection>
         <developerConnection>scm:git:git@github.com:Atmosphere/atmosphere-extensions.git</developerConnection>
         <url>http://github.com/Atmosphere/atmosphere-extensions</url>
-      <tag>atmosphere-extensions-project-2.3.2</tag>
+      <tag>HEAD</tag>
   </scm>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>artifactory.afrozaar.com-releases</name>
+            <url>https://maven-repository.afrozaar.com/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>remote-plugins-snapshot</id>
+            <name>artifactory.afrozaar.com-snapshots</name>
+            <url>https://maven-repository.afrozaar.com/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <developers>
         <developer>
             <id>jfarcand</id>
